@@ -1,72 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">  <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="assets/style.css">
-    
-    <title>Weather Visualization Dashboard</title>
-</head>
-<body style="background-color: lightgray">
-        
-        <nav class="navbar navbar-default">
-            <div class="container">
-                <div class="navbar-header">
-                    <a class="navbar-brand logo" href="index.html"> 
-                    <span class="nav-color">Latitude</span></a>
-                </div>
-    
-                <div class="nav navbar-nav navbar-right">
-                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown">Plots<span class="caret"></span></a>
+   <head>
+      <title>Latitude vs. Wind Speed</title>
+      <meta charset="UTF-8">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      <link rel="stylesheet" href="style.css">
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+      <link rel="stylesheet" href="assets/style.css">
+   </head>
+   <body>
+      <div class="container-fluid">
+         <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+               <div class="navbar-header">
+                  <a class="navbar-brand" href="./index.html"><span class="latitude">Latitude</a>
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls=" navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                  </button>
+               </div>
+               <ul class="navbar navbar-expand-lg navbar-right">
+                  <li>
+                     <div class="dropdown">
+                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Plots
+                        <span class="caret"></span></button> 
                         <ul class="dropdown-menu">
-                            <li><a href="temperature.html">Max Temperature</a></li>
-                            <li><a href="humidity.html">Humidity</a></li>
-                            <li><a href="cloudiness.html">Cloudiness</a></li>
-                            <li><a href="wind_speed.html">Wind Speed</a></li>
+                           <li><a class="dropdown-item" href="./temperature.html">Latitude vs. Max Temperature</a></li>
+                           <li><a class="dropdown-item" href="./humidity.html">Latitude vs. Humidity</a></li>
+                           <li><a class="dropdown-item" href="./cloudiness.html">Latitude vs. Cloudiness</a></li>
+                           <li><a class="dropdown-item" href="./windspeed.html">Latitude vs. Wind Speed</a></li>
                         </ul>
-                    </li>
-                    <li><a href="comparison.html"> Comparison</a></li>
-                    <li><a href="data.html"> Data</a></li>                                           
-                </div>
-            </div>      
-        </nav>
-
-    <div class = "container">
-        <div class="row">                          
-            <div class="col-md-8">
-                <div class="panel panel-default">
-                    <div class="panel-body">
-
-                        <h2>Wind Speed</h2>
-                        <hr>
-                        <img class="WindSpeed image" src="assets\Latitude_vs_WindSpeed.png" alt="WindSpeed image" >
-                        <p>The wind speed is not much affected by the distance from the equator, it’s almost moderate throughout the globe. </p>
-                    <br>        
-                    </div>
-                </div>
+                     </div>
+                  </li>
+                  <li>
+                     <a class="nav-link" href="./comparison.html"><span class="c-d">Comparison</a>
+                  </li>
+                  <li>
+                     <a class="nav-link" href="./data_table.html"><span class="c-d">Data</a>
+                  </li>
+               </ul>
             </div>
-            <div class="col-md-4">
-                <div class="panel panel-default">
-                        <div class="panel-body">                                    
-                            <h2>Visualizations</h2>
-                            <hr>
-
-                            <div class="row">
-                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6"><a href="temperature.html"><img class = "img img-responsive" src="assets\Latitude_vs_MaxTemp.png" style="width:100%" alt=""></a></div>
-                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6"><a href="humidity.html"><img class = "img img-responsive" src="assets\Latitude_vs_Humidity.png" style="width:100%" alt=""></a></div>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6"><a href="cloudiness.html"><img class = "img img-responsive" src="assets\Latitude_vs_Cloudiness.png" style="width:100%" alt=""></a></div>
-                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6"><a href="wind_speed.html"><img class = "img img-responsive" src="assets\Latitude_vs_WindSpeed.png" style="width:100%" alt=""></a></div>
-                            </div>
-                                
+         </nav>
+         <div class="content">
+            <div class="container-fluid">
+               <div class="row">
+                  <div class="col-sm-12 col-md-8">
+                     <div class="box">
+                        <div class="header">
+                           <h1 class="title">Wind Speed</h1>
                         </div>
-                
-                    </div>     
-            </div>    
-    </div>
-</body>
+                        <div class="content">
+                           <img src="./assets/images/Latitude_Windspeed.png" alt="Latitude vs. Wind Speed" class="img-responsive">
+                           <p class="category">There might be a slight correlation between latitude and wind speed, as the higher latitudes appear to have higher windspeeds. 
+                              On average, it could be due to more mountain ranges in the northern hemisphere, which garner higher wind speeds at higher altitudes. This would require further analysis, however.
+                           </p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-sm-12 col-md-4">
+                     <div class="box">
+                        <div class="header">
+                           <h1 class="title">Visualizations</h1>
+                        </div>
+                        <div class="content">
+                           <a href="./temperature.html"><img src="./assets/images/Latitude_Temperature.png" alt="Latitude vs. Max Temperature" height="160" width="160"></a>
+                           <a href="./humidity.html"><img src="./assets/images/Latitude_Humidity.png" alt="Latitude vs. Humidity" height="160" width="160"></a>
+                           <a href="./cloudiness.html"><img src="./assets/images/Latitude_Cloudiness.png" alt="Latitude vs. Cloudiness" height="160" width="160"></a>
+                           <a href="./windspeed.html"><img src="./assets/images/Latitude_Windspeed.png" alt="Latitude vs. Wind Speed" height="160" width="160"></a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </body>
 </html>
