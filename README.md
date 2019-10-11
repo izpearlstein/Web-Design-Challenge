@@ -1,3 +1,3 @@
 # Web-Design-Challenge
 
-Website Link: 
+Website Link: https://izpearlstein.github.io/Web-Design-Challenge/WebVisualizations
